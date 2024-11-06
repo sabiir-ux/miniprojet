@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Light background for a modern look */
+    background-color: #f8f9fa; 
 }
 
 .header {
@@ -20,7 +20,7 @@ body {
     background-color: #ffffff;
     font-size: 14px;
     color: #555;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .contact-info span {
@@ -35,7 +35,7 @@ body {
 }
 
 .top-nav a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3; 
 }
 
 .main-nav {
@@ -49,7 +49,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    font-size: 24px; /* Larger font size for logo */
+    font-size: 24px; 
     font-weight: bold;
 }
 
@@ -131,10 +131,12 @@ main {
 }
 
 .gallery {
-    margin: 20px 0;
+    margin:  0 auto;
+    display: flex;
+    justify-content: center;
 }
 
-.gallery h2 {
+.info-section h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333; 
@@ -145,6 +147,8 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px;
     padding: 0 20px;
+    max-width: 1300px;  
+        
 }
 
 .image-item {
@@ -164,14 +168,14 @@ main {
 
 .image-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     border-radius: 8px;
 }
 
 .image-item h3 {
     margin: 10px 0;
     font-size: 1.5rem;
-    color: #333; /* Darker text for headings */
+    color: #333;
 }
 
 .image-item p {
@@ -179,10 +183,13 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 10px 0;
     background-color: #0056b3;
     color: white;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }

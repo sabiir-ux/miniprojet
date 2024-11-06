@@ -7,22 +7,45 @@
     <link rel="stylesheet" href="css/roles.css"> 
 </head>
 <body>
-    <header>
-        <h1>Welcome to our Medical Cabinet</h1>
-    </header>
+    <div class="page-border">
+        <header class="header">
+            <div class="top-bar">
+                <div class="contact-info">
+                    <span class="phone">📞 +880 1234 56789</span>
+                    <span class="email">📧 support@mediplus.com</span>
+                </div>
+                <nav class="top-nav">
+                    <a href="index.html">Home</a>
+                    <a href="#">Doctors</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="main-nav">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Logo"> 
+                    <span>Medi<span class="plus">plus</span></span>
+                </div>
+                <nav class="navigation">
+                    <a href="index.html">Home</a>
+                    <a href="#">Services</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+    </div>
     
     <main class="selection-page">
         <h2>Please choose your role:</h2>
         <div class="role-container">
             <div class="role-item">
-                <h3>I am a Secretary</h3> <!-- Text above the image -->
+                <h3>I am a Secretary</h3> 
                 <img src="secretary.jpg" alt="Secretary" class="role-image">
-                <button class="role-button" onclick="window.location.href='sign.html'">Select</button>
+                <button class="role-button" onclick="window.location.href='signsecretaire.html'">Select</button>
             </div>
             <div class="role-item">
-                <h3>I am a Doctor</h3> <!-- Text above the image -->
+                <h3>I am a Doctor</h3> 
                 <img src="doctor.jpg" alt="Doctor" class="role-image">
-                <button class="role-button" onclick="window.location.href='sign.html'">Select</button>
+                <button class="role-button" onclick="window.location.href='signdoctor.html'">Select</button>
             </div>
         </div>
     </main>
