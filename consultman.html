@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Management</title>
+    <link rel="stylesheet" href="cnsl.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        .btn-edit {
+            background-color: #ffc107;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+        }
+        .btn-print{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="logo.png" alt="Mediplus Logo" class="logo-img">
+                <span>Mediplus</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="doctor.jpg" alt="User Image" class="user-img">
+            <div>
+                <p class="bold">DOCTOR</p>
+                <p>Admin</p>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bx-clinic'></i>
+                    <span class="nav-item">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="New Text Document.html">
+                    <i class='bx bx-heart-square'></i>
+                    <span class="nav-item">Patients</span>
+                </a>
+                <span class="tooltip">Patients</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-notepad'></i>
+                    <span class="nav-item">Certificate Management</span>
+                </a>
+                <span class="tooltip">Certificate Management</span>
+            </li>
+            <li>
+                <a href="consultman.html">
+                    <i class='bx bx-heart'></i>
+                    <span class="nav-item">Consultation Management</span>
+                </a>
+                <span class="tooltip">Consultation Management</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pulse'></i>
+                    <span class="nav-item">Ordinance Management</span>
+                </a>
+                <span class="tooltip">Ordinance Management</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome">
+            <h2 id="title">Consultation Management</h2>
+        </div>
+        <div class="content">
+            <div class="search">
+                <input type="search" id="searchInput" placeholder="Search consultations" class="search-box">
+            </div>
+            <form class="form">
+                <button type="button" id="addConsultationBtn" class="btn-primary">Add New Consultation</button>
+            </form>
+            <table id="consultationsTable">
+                <thead>
+                    <tr>
+                        <th>CIN</th>
+                        <th>Patient Name</th>
+                        <th>Consultation Date</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Symptoms</th>
+                        <th>Diagnosing</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Consultation rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add/Edit Consultation</h2>
+            <form id="consultationForm">
+                <label for="CIN">CIN:</label>
+                <input type="text" id="CIN" placeholder="Enter CIN" required>
+    
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" placeholder="Enter Patient Name" required>
+    
+                <label for="date">Consultation Date:</label>
+                <input type="date" id="date" required>
+    
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter Age" required>
+    
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+    
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" rows="4" placeholder="Describe the symptoms" required></textarea>
+    
+                <label for="diagnosis">Diagnosing:</label>
+                <textarea id="diagnosis" rows="4" placeholder="Enter the diagnosis" required></textarea>
+    
+                <button type="submit" class="btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+<script src="cnsl.js"></script>
+</body>
+</html>
