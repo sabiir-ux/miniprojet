@@ -9,8 +9,8 @@ const patientsChart = new Chart(ctx, {
             {
                 label: 'New Patients',
                 data: [50, 70, 40, 60, 45, 70, 65, 75, 55, 80, 60, 70],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Light blue fill
-                borderColor: 'rgba(54, 162, 235, 1)', // Darker blue line
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', 
+                borderColor: 'rgba(54, 162, 235, 1)', 
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4 // Smooth curve

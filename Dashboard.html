@@ -193,23 +193,42 @@
    <script src="main.js"></script>
 
    <script>
-    
-// Fetch mock data (replace this with 'dashboard_data.php' when backend is ready)
+    // Récupérer les rendez-vous d'aujourd'hui
+    fetch('api/todays_appointments.php')
+        .then(response => response.json())
+        .then(data => console.log('Rendez-vous d\'aujourd\'hui:', data))
+        .catch(error => console.log('Erreur:', error));
 
-fetch('mock_dashboard_data.php')  // Step 1: Request the data from the server.
-  .then(response => response.json()) // Step 2: Convert the server's response into a JavaScript object.
-  .then(data => {     // Step 3: Use the data. 
-    // Update counts
-    document.getElementById('patient-count').textContent = data.new_patients;
-    document.getElementById('appointment-count').textContent = data.todays_appointments;
-    document.getElementById('payment-count').textContent = `$${data.total_payments}`;
-    document.querySelector('.amount').textContent = `$${data.todays_earnings}`;
+    // Récupérer les paiements d'aujourd'hui
+    fetch('api/todays_earnings.php')
+        .then(response => response.json())
+        .then(data => console.log('Paiements d\'aujourd\'hui:', data))
+        .catch(error => console.log('Erreur:', error));
 
-    // Update Charts
-    updatePatientsChart(data.patients_gender);
-  })
-  .catch(error => console.error('Error fetching mock data:', error));  // Step 4: Handle any errors.
+    // Récupérer les paiements totaux
+    fetch('api/total_payments.php')
+        .then(response => response.json())
+        .then(data => console.log('Paiements totaux:', data))
+        .catch(error => console.log('Erreur:', error));
 
-   </script>
+    // Fetching data for the charts
+    fetch('api/get_patients_data.php') // Make sure your API returns a proper JSON
+    .then(response => response.json())
+    .then(data => {
+    // Update New Patients and Return Patients chart data dynamically
+    patientsChart.data.datasets[0].data = data.newPatients;
+    patientsChart.data.datasets[1].data = data.returnPatients;
+    patientsChart.update();
+
+    // Update Patients Gender chart data dynamically
+    patientsGender.data.datasets[0].data = data.genderData; // [male, female, kids]
+    patientsGender.update();
+})
+.catch(error => console.error('Error fetching data:', error));
+
+
+     
+</script>
+
 </body>
 </html>
