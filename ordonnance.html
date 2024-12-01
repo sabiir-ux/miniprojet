@@ -10,44 +10,67 @@
 
 <body>
 
-    <header>
-        <h1>Gestion d'Ordonnances</h1>
+    <header class="header">
+        <div class="top-bar">
+            <div class="contact-info">
+                <span class="phone">📞 +212 633286620</span>
+            </div>
+
+            <nav class="top-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+        <div class="main-nav">
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+                <span>Medi<span class="plus">plus</span></span>
+            </div>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </nav>
+
+        </div>
     </header>
 
     <h2>Formulaire d'Ordonnance</h2>
 
-    <form id="ordonnanceForm">
-        <!-- Nom du patient -->
-        <label for="nomPatient">Nom du Patient :</label>
-        <input type="text" id="nomPatient" name="nomPatient" placeholder="Nom complet du patient" required><br><br>
+    <br>
+    <div class="form-container">
+        <form id="ordonnanceForm">
+            <!-- Nom du patient -->
+            <label for="nomPatient">Nom du Patient :</label>
+            <input type="text" id="nomPatient" name="nomPatient" placeholder="Nom complet du patient" required><br><br>
 
-        <!-- CIN du patient -->
-        <label for="cinPatient">CIN du Patient :</label>
-        <input type="text" id="cinPatient" name="cinPatient" placeholder="Ex : A12345678" required><br><br>
+            <!-- CIN du patient -->
+            <label for="cinPatient">CIN du Patient :</label>
+            <input type="text" id="cinPatient" name="cinPatient" placeholder="Ex : A12345678" required><br><br>
 
-        <!-- État de santé -->
-        <label for="etatSante">État de Santé :</label>
-        <textarea id="etatSante" name="etatSante" placeholder="Décrire brièvement l'état de santé du patient"
-            required></textarea><br><br>
+            <!-- État de santé -->
+            <label for="etatSante">État de Santé :</label>
+            <textarea id="etatSante" name="etatSante" placeholder="Décrire brièvement l'état de santé du patient"
+                required></textarea><br><br>
 
-        <!-- Médicaments prescrits -->
-        <label for="medicaments">Médicaments :</label>
-        <textarea id="medicaments" name="medicaments" placeholder="Ex : Paracétamol 500mg, 2 fois par jour"
-            required></textarea><br><br>
+            <!-- Médicaments prescrits -->
+            <label for="medicaments">Médicaments :</label>
+            <textarea id="medicaments" name="medicaments" placeholder="Ex : Paracétamol 500mg, 2 fois par jour"
+                required></textarea><br><br>
 
-        <!-- Conseils -->
-        <label for="conseil">Conseils :</label>
-        <textarea id="conseil" name="conseil" placeholder="Ex : Repos, hydrater régulièrement"
-            required></textarea><br><br>
+            <!-- Conseils -->
+            <label for="conseil">Conseils :</label>
+            <textarea id="conseil" name="conseil" placeholder="Ex : Repos, hydrater régulièrement"
+                required></textarea><br><br>
 
-        <!-- Date de l'ordonnance -->
-        <label for="dateOrdonnance">Date de l'Ordonnance :</label>
-        <input type="date" id="dateOrdonnance" name="dateOrdonnance" required><br><br>
+            <!-- Date de l'ordonnance -->
+            <label for="dateOrdonnance">Date de l'Ordonnance :</label>
+            <input type="date" id="dateOrdonnance" name="dateOrdonnance" required><br><br>
 
-        <!-- Boutons -->
-        <button type="button" onclick="enregistrerOrdonnance()">Enregistrer l'Ordonnance</button><br><br>
-        <button type="button" onclick="imprimerOrdonnance()">Imprimer l'Ordonnance</button>
-    </form>
+            <!-- Boutons -->
+            <button type="button" onclick="enregistrerOrdonnance()">Enregistrer l'Ordonnance</button><br><br>
+            <button type="button" onclick="imprimerOrdonnance()">Imprimer l'Ordonnance</button>
+        </form>
+    </div>
 
     <footer>
         <p>&copy; 2024 Cabinet Médical</p>
