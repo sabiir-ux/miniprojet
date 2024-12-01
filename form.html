@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+    <meta charset="UTF-8">
+    <title>Ajout de Certificat Médical</title>
+    <link rel="stylesheet" href="./form.css"> 
+ </head>
+ <body>
+
+    <header>
+        <h1>Gestion Certificat</h1>      
+     </header>
+ <form id="certificatForm" action="enregistrer_certificat.php" method="POST">
+        <h2>Formulaire de Certificat Médical</h2>
+        
+        <label for="nomPatient">Nom du Patient :</label>
+        <input type="text" id="nomPatient" name="nomPatient" required><br><br>
+    
+        <label for="CINPatient">CIN :</label>
+        <input type="text" id="CINPatient" name="CINPatient" required><br><br>
+    
+        <label for="etatSante">État de Santé :</label>
+        <textarea id="etatSante" name="etatSante" required></textarea><br><br>
+    
+        <label for="dateCertificat">Date du Certificat :</label>
+        <input type="date" id="dateCertificat" name="dateCertificat" required><br><br>
+    
+        <label for="motifCertificat">Motif du Certificat :</label>
+        <input type="text" id="motifCertificat" name="motifCertificat"><br><br>
+    
+        <button type="submit">Enregistrer le Certificat</button>
+        <button type="button" onclick="imprimerCertificat()">Imprimer le Certificat</button>
+ </form>
+    
+ <footer>
+    <p>&copy; 2024 Medical Cabinet</p>
+ </footer>
+
+ <script src="./form.js"></script> 
+ </body>
+</html>
