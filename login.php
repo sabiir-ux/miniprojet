@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Authentification réussie
         echo "Bienvenue, vous êtes connecté en tant que médecin.";
         // Rediriger vers la page d'accueil ou autre
-        header("Location: dashboard.php"); // Remplacez 'dashboard.php' par la page d'accueil après connexion
+        header("Location: medecin.html"); // Remplacez 'dashboard.php' par la page d'accueil après connexion
         exit();
     } else {
         // Authentification échouée
