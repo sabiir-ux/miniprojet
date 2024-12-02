@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord médical</title>
+    <link rel="stylesheet" href="dashdoctor.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Barre de navigation latérale -->
+        <aside class="sidebar">
+            <!-- Conteneur pour le logo et le bouton de bascule -->
+            <div class="logo-container">
+                <button class="toggle-btn">☰</button>
+                <h1 class="logo">Mediplus</h1>
+            </div>
+
+            <!-- Profil du médecin -->
+            <div class="doctor-profile" >
+                <img  src="doctor-profile.jpg" alt="Photo du médecin" class="doctor-photo">
+                <p class="doctor-name">Dr. Jean Dupont</p>
+                <p class="doctor-role">Admin</p>
+            </div>
+
+            <!-- Menu de navigation -->
+            <ul class="nav-menu">
+                <li>
+                    <i class="icon-home"></i>
+                    <span>Dashboard</span>
+                </li>
+                <li>
+                    <i class="icon-consultation"></i>
+                    <span>Consultation</span>
+                </li>
+                <li>
+                    <i class="icon-certificat"></i>
+                    <span>Certificat</span>
+                </li>
+                <li>
+                    <i class="icon-ordonnance"></i>
+                    <span>Ordonnance</span>
+                </li>
+                <li>
+                    <i class="icon-patients"></i>
+                    <span>Patients</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <header>
+                <h1>Tableau de bord</h1>
+            </header>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Total Appointments</h3>
+                    <p>499</p>
+                </div>
+                <div class="stat">
+                    <h3>Revenue</h3>
+                    <p>$582,441,618.80</p>
+                </div>
+                <div class="stat">
+                    <h3>Today's Earnings</h3>
+                    <p>$0.00</p>
+                </div>
+                <div class="stat">
+                    <h3>Upcoming Appointments</h3>
+                    <p>8</p>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="chart">
+                    <h3>Monthly Registered Users</h3>
+                    <canvas id="userChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>Monthly Earnings</h3>
+                    <p>$229,655</p>
+                    <p class="decrease">-81.08% From Previous Month</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashdoctor.js"></script>
+</body>
+</html>
