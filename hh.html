@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Paiements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Ajouter un Paiement</h2>
+    <form id="paymentForm">
+        <label for="name">Prénom :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Nom :</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="cin">CIN :</label>
+        <input type="text" id="cin" name="cin" required>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="service">Service :</label>
+        <select id="service" name="service">
+            <option value="Consultation">Consultation</option>
+            <option value="Radiologie">Radiologie</option>
+        </select>
+
+        <label for="total_amount">Montant Total :</label>
+        <input type="number" id="total_amount" name="total_amount" step="0.01" required>
+
+        <label for="paid_amount">Montant Payé :</label>
+        <input type="number" id="paid_amount" name="paid_amount" step="0.01" required>
+
+        <button type="submit">Enregistrer</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
